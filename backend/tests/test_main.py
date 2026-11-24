@@ -63,3 +63,34 @@ def test_mock_bullets_reword_existing_resume_lines():
     for m in data["matches"]:
         for b in m["bullets"]:
             assert b["original"] in resume, b["original"]
+
+
+_FUNCTION_WORDS = {"a", "an", "the", "using", "with", "in", "of", "for", "and", "it", "on"}
+
+
+def _words(text: str) -> set[str]:
+    import re
+
+    return set(re.findall(r"[a-z0-9][a-z0-9+#]*", text.lower()))
+
+
+def test_mock_bullets_introduce_no_new_technical_terms():
+    data = client.get("/api/mock").json()
+    vocab = {s.lower() for s in data["resume_skills"]}
+    for m in data["matches"]:
+        vocab |= {s.lower() for s in m["matched_skills"]}
+        vocab |= {g["skill"].lower() for g in m["missing_skills"]}
+    for m in data["matches"]:
+        for b in m["bullets"]:
+            new_terms = _words(b["suggested"]) - _words(b["original"])
+            assert not (new_terms & vocab), (b["suggested"], new_terms & vocab)
+
+
+def test_mock_bullets_only_reword_original_wording():
+    """New words (e.g. 'developed', 'trained') can imply more than the original says."""
+    data = client.get("/api/mock").json()
+    for m in data["matches"]:
+        for b in m["bullets"]:
+            assert b["suggested"] != b["original"]
+            added = _words(b["suggested"]) - _words(b["original"]) - _FUNCTION_WORDS
+            assert not added, (b["original"], b["suggested"], added)

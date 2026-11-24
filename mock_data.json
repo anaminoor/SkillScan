@@ -34,13 +34,13 @@
       "bullets": [
         {
           "original": "Built an image classifier using PyTorch",
-          "suggested": "Developed and trained a PyTorch image classifier",
-          "reason": "Aligns with the job's emphasis on model training"
+          "suggested": "Built a PyTorch image classifier",
+          "reason": "Names PyTorch up front, the first tool this posting lists"
         },
         {
           "original": "Cleaned and analysed sales data with Pandas and SQL",
           "suggested": "Cleaned and analysed sales data using Pandas and SQL",
-          "reason": "Mirrors the posting's data-wrangling wording"
+          "reason": "Names Pandas and SQL in the same words as the posting"
         }
       ],
       "jd_text": "ML Engineer Intern - Acme AI\n\nYou will help train and evaluate machine learning models for our vision products.\n\nRequirements\n- Strong Python and hands-on PyTorch experience\n- Model training and evaluation with scikit-learn\n- Comfortable wrangling data with Pandas and SQL\n- Version control with Git\n- Nice to have: Docker for packaging models\n",
@@ -117,8 +117,8 @@
       "bullets": [
         {
           "original": "Created REST endpoints with FastAPI for a student project",
-          "suggested": "Designed and implemented REST endpoints with FastAPI",
-          "reason": "Matches the job's focus on API design"
+          "suggested": "Created REST endpoints using FastAPI",
+          "reason": "Keeps the FastAPI and REST wording this posting uses"
         }
       ],
       "jd_text": "Backend Developer (Python) - Northwind Labs\n\nBuild and maintain the APIs behind our logistics platform.\n\nRequirements\n- Python and FastAPI for REST API design\n- PostgreSQL and SQL query tuning\n- Docker and CI/CD pipelines\n- Git and Linux day to day\n- Nice to have: Redis caching\n",
@@ -192,8 +192,8 @@
       "bullets": [
         {
           "original": "Cleaned and analysed sales data with Pandas and SQL",
-          "suggested": "Analysed sales data with SQL and Pandas to surface trends",
-          "reason": "Emphasises analysis, which this role prioritises"
+          "suggested": "Cleaned and analysed sales data using SQL and Pandas",
+          "reason": "Leads with SQL, which this role lists first"
         }
       ],
       "jd_text": "Data Analyst - Brightline Retail\n\nTurn sales and customer data into decisions for store teams.\n\nRequirements\n- SQL and Pandas for cleaning and analysing data\n- Python for repeatable analysis\n- Dashboards in Tableau and models in Excel\n- A/B testing and Statistics fundamentals\n",
@@ -265,8 +265,8 @@
       "bullets": [
         {
           "original": "Cleaned and analysed sales data with Pandas and SQL",
-          "suggested": "Cleaned and transformed sales data with Pandas and SQL",
-          "reason": "Frames existing data work in pipeline terms"
+          "suggested": "Cleaned sales data and analysed it with Pandas and SQL",
+          "reason": "Puts the data-cleaning step first, as in pipeline work"
         }
       ],
       "jd_text": "Data Engineer - Streamline Data\n\nDesign the pipelines that feed our analytics warehouse.\n\nRequirements\n- Python and SQL for ETL development\n- Apache Spark and Airflow for batch workflows\n- Kafka for streaming ingestion\n- AWS data services and dbt for modelling\n- Linux and Git fundamentals\n",
@@ -337,8 +337,8 @@
       "bullets": [
         {
           "original": "Built an image classifier using PyTorch",
-          "suggested": "Built a PyTorch image classifier, a foundation for vision work",
-          "reason": "Highlights the vision-related experience already on your resume"
+          "suggested": "Built an image classifier in PyTorch",
+          "reason": "Keeps the vision-related work and PyTorch visible"
         }
       ],
       "jd_text": "Computer Vision Research Intern - Helix Robotics\n\nPrototype perception models for warehouse robots.\n\nRequirements\n- Python and PyTorch for training vision models\n- OpenCV and C++ for real-time processing\n- CUDA for GPU acceleration and ROS for robot integration\n- A solid grounding in linear algebra\n",
