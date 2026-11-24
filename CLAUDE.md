@@ -36,3 +36,7 @@ tailored bullet suggestions.
 ## Deployment
 - Before deploying, measure the memory footprint (sentence-transformers and
   torch are heavy) and confirm it fits the target host.
+
+## Git
+- Never add Co-Authored-By, Claude-Session or "Generated with Claude" lines to
+  commit messages or PR descriptions.
