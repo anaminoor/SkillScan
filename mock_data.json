@@ -1,0 +1,157 @@
+{
+  "resume_skills": ["Python", "PyTorch", "SQL", "Git", "FastAPI", "Pandas", "scikit-learn", "Linux"],
+  "matches": [
+    {
+      "job_id": "j_101",
+      "title": "ML Engineer Intern",
+      "company": "Acme AI",
+      "score": 95,
+      "matched_skills": ["Python", "PyTorch", "Git", "scikit-learn", "Pandas", "SQL"],
+      "missing_skills": [
+        { "skill": "Docker", "importance": "low", "suggestion": "Containerize one of your projects and document the Dockerfile in its README." }
+      ],
+      "bullets": [
+        {
+          "original": "Built an image classifier using PyTorch",
+          "suggested": "Developed and trained a PyTorch image classifier",
+          "reason": "Aligns with the job's emphasis on model training"
+        },
+        {
+          "original": "Cleaned and analysed sales data with Pandas and SQL",
+          "suggested": "Cleaned and analysed sales data using Pandas and SQL",
+          "reason": "Mirrors the posting's data-wrangling wording"
+        }
+      ]
+    },
+    {
+      "job_id": "j_102",
+      "title": "Backend Developer (Python)",
+      "company": "Northwind Labs",
+      "score": 78,
+      "matched_skills": ["Python", "FastAPI", "SQL", "Git", "Linux"],
+      "missing_skills": [
+        { "skill": "PostgreSQL", "importance": "high", "suggestion": "Move one project's database from SQLite to PostgreSQL." },
+        { "skill": "Docker", "importance": "high", "suggestion": "Containerize your FastAPI project." },
+        { "skill": "CI/CD", "importance": "medium", "suggestion": "Add a GitHub Actions workflow that runs your tests." },
+        { "skill": "Redis", "importance": "low", "suggestion": "Add caching to one endpoint with Redis." }
+      ],
+      "bullets": [
+        {
+          "original": "Created REST endpoints with FastAPI for a student project",
+          "suggested": "Designed and implemented REST endpoints with FastAPI",
+          "reason": "Matches the job's focus on API design"
+        }
+      ]
+    },
+    {
+      "job_id": "j_103",
+      "title": "Data Analyst",
+      "company": "Brightline Retail",
+      "score": 66,
+      "matched_skills": ["SQL", "Pandas", "Python"],
+      "missing_skills": [
+        { "skill": "Tableau", "importance": "high", "suggestion": "Build a dashboard from a public dataset in Tableau Public." },
+        { "skill": "Excel", "importance": "medium", "suggestion": "Show spreadsheet modelling in a project write-up." },
+        { "skill": "A/B testing", "importance": "medium", "suggestion": "Run a simple A/B test analysis on sample data." },
+        { "skill": "Statistics", "importance": "medium", "suggestion": "Add hypothesis-testing work to a portfolio project." }
+      ],
+      "bullets": [
+        {
+          "original": "Cleaned and analysed sales data with Pandas and SQL",
+          "suggested": "Analysed sales data with SQL and Pandas to surface trends",
+          "reason": "Emphasises analysis, which this role prioritises"
+        }
+      ]
+    },
+    {
+      "job_id": "j_104",
+      "title": "Data Engineer",
+      "company": "Streamline Data",
+      "score": 57,
+      "matched_skills": ["Python", "SQL", "Linux", "Git"],
+      "missing_skills": [
+        { "skill": "Apache Spark", "importance": "high", "suggestion": "Rewrite one Pandas pipeline in PySpark on a sample dataset." },
+        { "skill": "Airflow", "importance": "high", "suggestion": "Schedule a small ETL job as an Airflow DAG." },
+        { "skill": "Kafka", "importance": "medium", "suggestion": "Work through a Kafka producer/consumer tutorial." },
+        { "skill": "AWS", "importance": "medium", "suggestion": "Store pipeline output in S3 on the free tier." },
+        { "skill": "dbt", "importance": "low", "suggestion": "Model a small warehouse schema with dbt." }
+      ],
+      "bullets": [
+        {
+          "original": "Cleaned and analysed sales data with Pandas and SQL",
+          "suggested": "Cleaned and transformed sales data with Pandas and SQL",
+          "reason": "Frames existing data work in pipeline terms"
+        }
+      ]
+    },
+    {
+      "job_id": "j_105",
+      "title": "Computer Vision Research Intern",
+      "company": "Helix Robotics",
+      "score": 46,
+      "matched_skills": ["Python", "PyTorch"],
+      "missing_skills": [
+        { "skill": "OpenCV", "importance": "high", "suggestion": "Add an OpenCV preprocessing step to your classifier project." },
+        { "skill": "C++", "importance": "high", "suggestion": "Port one performance-critical function to C++." },
+        { "skill": "CUDA", "importance": "medium", "suggestion": "Profile a training run on GPU and note the speed-up." },
+        { "skill": "ROS", "importance": "medium", "suggestion": "Complete the ROS beginner tutorials." },
+        { "skill": "Linear algebra", "importance": "low", "suggestion": "Show geometry or linear-algebra coursework in a project." }
+      ],
+      "bullets": [
+        {
+          "original": "Built an image classifier using PyTorch",
+          "suggested": "Built a PyTorch image classifier, a foundation for vision work",
+          "reason": "Highlights the vision-related experience already on your resume"
+        }
+      ]
+    },
+    {
+      "job_id": "j_106",
+      "title": "Full-Stack Developer",
+      "company": "Pixel & Pine",
+      "score": 38,
+      "matched_skills": ["Git", "SQL", "Python"],
+      "missing_skills": [
+        { "skill": "React", "importance": "high", "suggestion": "Build a small React front end for one of your APIs." },
+        { "skill": "TypeScript", "importance": "high", "suggestion": "Convert a JavaScript project to TypeScript." },
+        { "skill": "Node.js", "importance": "high", "suggestion": "Build a simple Express service." },
+        { "skill": "CSS", "importance": "medium", "suggestion": "Publish a responsive page to show layout skills." },
+        { "skill": "GraphQL", "importance": "low", "suggestion": "Expose one dataset through a GraphQL endpoint." },
+        { "skill": "Jest", "importance": "low", "suggestion": "Add unit tests to a front-end project." }
+      ],
+      "bullets": []
+    },
+    {
+      "job_id": "j_107",
+      "title": "DevOps Engineer",
+      "company": "Cloudhaven",
+      "score": 33,
+      "matched_skills": ["Linux", "Git"],
+      "missing_skills": [
+        { "skill": "Kubernetes", "importance": "high", "suggestion": "Deploy a sample app to a local minikube cluster." },
+        { "skill": "Terraform", "importance": "high", "suggestion": "Define a small cloud resource with Terraform." },
+        { "skill": "Docker", "importance": "high", "suggestion": "Containerize one of your projects." },
+        { "skill": "AWS", "importance": "high", "suggestion": "Complete a cloud practitioner learning path." },
+        { "skill": "CI/CD", "importance": "medium", "suggestion": "Add a GitHub Actions pipeline to a repo." },
+        { "skill": "Bash scripting", "importance": "medium", "suggestion": "Automate a routine task with a documented shell script." },
+        { "skill": "Prometheus", "importance": "low", "suggestion": "Add basic metrics to a FastAPI service." }
+      ],
+      "bullets": []
+    },
+    {
+      "job_id": "j_108",
+      "title": "Mobile Developer (iOS)",
+      "company": "Orbit Apps",
+      "score": 30,
+      "matched_skills": ["Git"],
+      "missing_skills": [
+        { "skill": "Swift", "importance": "high", "suggestion": "Complete an introductory Swift course and build one small app." },
+        { "skill": "SwiftUI", "importance": "high", "suggestion": "Build a simple SwiftUI interface." },
+        { "skill": "Xcode", "importance": "high", "suggestion": "Learn the Xcode toolchain by shipping a demo app." },
+        { "skill": "REST APIs", "importance": "medium", "suggestion": "Call one of your own FastAPI endpoints from an app." },
+        { "skill": "Core Data", "importance": "low", "suggestion": "Persist data locally in a demo app." }
+      ],
+      "bullets": []
+    }
+  ]
+}

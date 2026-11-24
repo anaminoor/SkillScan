@@ -1,0 +1,9 @@
+.env
+__pycache__/
+venv/
+node_modules/
+.DS_Store.venv/
+chroma_db/
+.pytest_cache/
+*.pyc
+uploads/
