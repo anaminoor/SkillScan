@@ -36,5 +36,30 @@ def test_frontend_assets_are_served():
 
     html = client.get("/").text
     assert "SKILLSCAN" in html.upper()
-    for path in re.findall(r'(?:src|href)="((?:js|css)/[^"]+)"', html):
+    for path in re.findall(r'(?:src|href)="((?:js|css|vendor)/[^"]+)"', html):
         assert client.get("/" + path).status_code == 200, path
+
+
+def test_mock_diff_phrases_exist_in_texts():
+    """The diff view highlights by phrase, so every phrase must occur in its text."""
+    data = client.get("/api/mock").json()
+    resume = data["resume_text"].lower()
+    assert resume
+    for m in data["matches"]:
+        jd = m["jd_text"].lower()
+        for pair in m["diff"]["matched"]:
+            assert pair["resume"].lower() in resume, (m["job_id"], pair)
+            assert pair["jd"].lower() in jd, (m["job_id"], pair)
+        for phrase in m["diff"]["missing"]:
+            assert phrase.lower() in jd, (m["job_id"], phrase)
+        # every missing skill is underlined on the JD side
+        missing = {p.lower() for p in m["diff"]["missing"]}
+        assert {g["skill"].lower() for g in m["missing_skills"]} <= missing, m["job_id"]
+
+
+def test_mock_bullets_reword_existing_resume_lines():
+    data = client.get("/api/mock").json()
+    resume = data["resume_text"]
+    for m in data["matches"]:
+        for b in m["bullets"]:
+            assert b["original"] in resume, b["original"]

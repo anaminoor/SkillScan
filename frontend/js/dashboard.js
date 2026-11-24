@@ -1,6 +1,7 @@
 /* Results dashboard: ranked cards | overview | GAPS / MATCHED / BULLETS tabs. */
 (function () {
-  const { el, clear, ring } = window.SS;
+  const { el, clear, ring, buildRadar, buildDiff, buildBullets } = window.SS;
+  let activeRadar = null;
 
   const TABS = ["gaps", "matched", "bullets"];
 
@@ -13,15 +14,16 @@
 
   function build(root, data, onBack) {
     clear(root);
+    if (activeRadar) activeRadar.destroy();
     let selected = 0;
     let tab = "gaps";
+    const decisions = {};
 
     const cards = el("div", { class: "cards" });
     const overview = el("div", { class: "overview panel" });
     const detail = el("div", { class: "detail panel" });
 
-    function renderCards() {
-      clear(cards);
+    function buildCards() {
       data.matches.forEach((m, i) => {
         const card = el("button", {
           class: "card fade-in", style: `animation-delay:${i * 50}ms`,
@@ -41,6 +43,9 @@
         ]);
         cards.append(card);
       });
+    }
+    function markSelected() {
+      [...cards.children].forEach((c, i) => c.setAttribute("aria-pressed", String(i === selected)));
     }
 
     function renderOverview() {
@@ -64,7 +69,11 @@
         el("div", { class: "label", text: "[ YOUR SKILLS ]" }),
         el("div", { class: "skills" }, data.resume_skills.map((s) =>
           el("span", { class: `chip ${m.matched_skills.includes(s) ? "ok" : "dim"}`, text: s })
-        ))
+        )),
+        el("div", { class: "legend", "aria-label": "Skill chip legend" }, [
+          el("span", {}, [el("span", { class: "chip ok", text: "lit" }), " on this job's requirements"]),
+          el("span", {}, [el("span", { class: "chip dim", text: "dim" }), " not asked for by this job"]),
+        ])
       );
     }
 
@@ -86,18 +95,7 @@
         el("div", { class: "item matched-item fade-in" }, [el("span", { class: "name", text: s })])
       );
     }
-    function panelBullets(m) {
-      if (!m.bullets.length) return [el("div", { class: "empty", text: "No bullet suggestions for this role." })];
-      return [el("div", { class: "label", text: "[ REWORDED FROM YOUR RESUME ]" })].concat(
-        m.bullets.map((b) =>
-          el("div", { class: "item bullet fade-in" }, [
-            el("div", { class: "orig", text: b.original }),
-            el("p", { class: "sugg", text: b.suggested }),
-            el("div", { class: "sug", text: b.reason }),
-          ])
-        )
-      );
-    }
+    function panelBullets(m) { return buildBullets(m, decisions); }
 
     function renderDetail() {
       const m = data.matches[selected];
@@ -119,19 +117,37 @@
       clear(detail).append(tabbar, el("div", { class: "tabpanel", id: "tabpanel", role: "tabpanel", "aria-labelledby": `tab-${tab}` }, body));
     }
 
-    function render() { renderCards(); renderOverview(); renderDetail(); }
+    const radar = buildRadar(data.matches[0]);
+    activeRadar = radar;
+    const radarPanel = el("div", { class: "panel radar-panel" }, [
+      el("div", { class: "label radar-head" }, ["[ ", el("b", { text: "SKILL RADAR" }), " ]"]),
+      radar.node,
+    ]);
+    const diffSlot = el("div", { class: "diff-slot" });
+
+    function renderDiff() {
+      clear(diffSlot).append(buildDiff(data.resume_text, data.matches[selected]));
+    }
+
+    function render() {
+      markSelected(); renderOverview(); renderDetail();
+      radar.update(data.matches[selected]);
+      renderDiff();
+    }
 
     root.append(
       el("div", { class: "dash-bar" }, [
         el("div", { class: "label" }, ["[ ", el("b", { text: "RESULTS" }), ` ] ${data.matches.length} jobs ranked`]),
-        el("button", { class: "btn ghost", style: "margin:0", text: "New scan", onclick: onBack }),
+        el("button", { class: "btn new-scan", type: "button", text: "+ New scan", onclick: onBack }),
       ]),
       el("div", { class: "dash" }, [
         el("div", {}, [el("div", { class: "col-head label", text: "[ RANKED MATCHES ]" }), cards]),
-        el("div", {}, [el("div", { class: "col-head label", text: "[ OVERVIEW ]" }), overview]),
+        el("div", {}, [el("div", { class: "col-head label", text: "[ OVERVIEW ]" }), overview, radarPanel]),
         el("div", { class: "col-detail" }, [el("div", { class: "col-head label", text: "[ ANALYSIS ]" }), detail]),
-      ])
+      ]),
+      diffSlot
     );
+    buildCards();
     render();
   }
 

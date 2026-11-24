@@ -1,14 +1,35 @@
 {
-  "resume_skills": ["Python", "PyTorch", "SQL", "Git", "FastAPI", "Pandas", "scikit-learn", "Linux"],
+  "resume_skills": [
+    "Python",
+    "PyTorch",
+    "SQL",
+    "Git",
+    "FastAPI",
+    "Pandas",
+    "scikit-learn",
+    "Linux"
+  ],
+  "resume_text": "ALEX MORGAN\nComputer Science undergraduate\n\nSKILLS\nPython, PyTorch, SQL, Git, FastAPI, Pandas, scikit-learn, Linux\n\nPROJECTS\nPlant Disease Classifier\n- Built an image classifier using PyTorch\n- Evaluated models with scikit-learn and tracked changes with Git\n\nSales Insights\n- Cleaned and analysed sales data with Pandas and SQL\n- Presented weekly trends to classmates\n\nStudy Group Tracker\n- Created REST endpoints with FastAPI for a student project\n- Deployed and tested it on a Linux server\n",
   "matches": [
     {
       "job_id": "j_101",
       "title": "ML Engineer Intern",
       "company": "Acme AI",
       "score": 95,
-      "matched_skills": ["Python", "PyTorch", "Git", "scikit-learn", "Pandas", "SQL"],
+      "matched_skills": [
+        "Python",
+        "PyTorch",
+        "Git",
+        "scikit-learn",
+        "Pandas",
+        "SQL"
+      ],
       "missing_skills": [
-        { "skill": "Docker", "importance": "low", "suggestion": "Containerize one of your projects and document the Dockerfile in its README." }
+        {
+          "skill": "Docker",
+          "importance": "low",
+          "suggestion": "Containerize one of your projects and document the Dockerfile in its README."
+        }
       ],
       "bullets": [
         {
@@ -21,19 +42,77 @@
           "suggested": "Cleaned and analysed sales data using Pandas and SQL",
           "reason": "Mirrors the posting's data-wrangling wording"
         }
-      ]
+      ],
+      "jd_text": "ML Engineer Intern - Acme AI\n\nYou will help train and evaluate machine learning models for our vision products.\n\nRequirements\n- Strong Python and hands-on PyTorch experience\n- Model training and evaluation with scikit-learn\n- Comfortable wrangling data with Pandas and SQL\n- Version control with Git\n- Nice to have: Docker for packaging models\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "PyTorch",
+            "jd": "PyTorch"
+          },
+          {
+            "resume": "scikit-learn",
+            "jd": "scikit-learn"
+          },
+          {
+            "resume": "Pandas",
+            "jd": "Pandas"
+          },
+          {
+            "resume": "SQL",
+            "jd": "SQL"
+          },
+          {
+            "resume": "Git",
+            "jd": "Git"
+          },
+          {
+            "resume": "image classifier",
+            "jd": "vision products"
+          }
+        ],
+        "missing": [
+          "Docker"
+        ]
+      }
     },
     {
       "job_id": "j_102",
       "title": "Backend Developer (Python)",
       "company": "Northwind Labs",
       "score": 78,
-      "matched_skills": ["Python", "FastAPI", "SQL", "Git", "Linux"],
+      "matched_skills": [
+        "Python",
+        "FastAPI",
+        "SQL",
+        "Git",
+        "Linux"
+      ],
       "missing_skills": [
-        { "skill": "PostgreSQL", "importance": "high", "suggestion": "Move one project's database from SQLite to PostgreSQL." },
-        { "skill": "Docker", "importance": "high", "suggestion": "Containerize your FastAPI project." },
-        { "skill": "CI/CD", "importance": "medium", "suggestion": "Add a GitHub Actions workflow that runs your tests." },
-        { "skill": "Redis", "importance": "low", "suggestion": "Add caching to one endpoint with Redis." }
+        {
+          "skill": "PostgreSQL",
+          "importance": "high",
+          "suggestion": "Move one project's database from SQLite to PostgreSQL."
+        },
+        {
+          "skill": "Docker",
+          "importance": "high",
+          "suggestion": "Containerize your FastAPI project."
+        },
+        {
+          "skill": "CI/CD",
+          "importance": "medium",
+          "suggestion": "Add a GitHub Actions workflow that runs your tests."
+        },
+        {
+          "skill": "Redis",
+          "importance": "low",
+          "suggestion": "Add caching to one endpoint with Redis."
+        }
       ],
       "bullets": [
         {
@@ -41,19 +120,74 @@
           "suggested": "Designed and implemented REST endpoints with FastAPI",
           "reason": "Matches the job's focus on API design"
         }
-      ]
+      ],
+      "jd_text": "Backend Developer (Python) - Northwind Labs\n\nBuild and maintain the APIs behind our logistics platform.\n\nRequirements\n- Python and FastAPI for REST API design\n- PostgreSQL and SQL query tuning\n- Docker and CI/CD pipelines\n- Git and Linux day to day\n- Nice to have: Redis caching\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "FastAPI",
+            "jd": "FastAPI"
+          },
+          {
+            "resume": "SQL",
+            "jd": "SQL"
+          },
+          {
+            "resume": "Git",
+            "jd": "Git"
+          },
+          {
+            "resume": "Linux",
+            "jd": "Linux"
+          },
+          {
+            "resume": "REST endpoints",
+            "jd": "REST API design"
+          }
+        ],
+        "missing": [
+          "PostgreSQL",
+          "Docker",
+          "CI/CD",
+          "Redis"
+        ]
+      }
     },
     {
       "job_id": "j_103",
       "title": "Data Analyst",
       "company": "Brightline Retail",
       "score": 66,
-      "matched_skills": ["SQL", "Pandas", "Python"],
+      "matched_skills": [
+        "SQL",
+        "Pandas",
+        "Python"
+      ],
       "missing_skills": [
-        { "skill": "Tableau", "importance": "high", "suggestion": "Build a dashboard from a public dataset in Tableau Public." },
-        { "skill": "Excel", "importance": "medium", "suggestion": "Show spreadsheet modelling in a project write-up." },
-        { "skill": "A/B testing", "importance": "medium", "suggestion": "Run a simple A/B test analysis on sample data." },
-        { "skill": "Statistics", "importance": "medium", "suggestion": "Add hypothesis-testing work to a portfolio project." }
+        {
+          "skill": "Tableau",
+          "importance": "high",
+          "suggestion": "Build a dashboard from a public dataset in Tableau Public."
+        },
+        {
+          "skill": "Excel",
+          "importance": "medium",
+          "suggestion": "Show spreadsheet modelling in a project write-up."
+        },
+        {
+          "skill": "A/B testing",
+          "importance": "medium",
+          "suggestion": "Run a simple A/B test analysis on sample data."
+        },
+        {
+          "skill": "Statistics",
+          "importance": "medium",
+          "suggestion": "Add hypothesis-testing work to a portfolio project."
+        }
       ],
       "bullets": [
         {
@@ -61,20 +195,72 @@
           "suggested": "Analysed sales data with SQL and Pandas to surface trends",
           "reason": "Emphasises analysis, which this role prioritises"
         }
-      ]
+      ],
+      "jd_text": "Data Analyst - Brightline Retail\n\nTurn sales and customer data into decisions for store teams.\n\nRequirements\n- SQL and Pandas for cleaning and analysing data\n- Python for repeatable analysis\n- Dashboards in Tableau and models in Excel\n- A/B testing and Statistics fundamentals\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "Pandas",
+            "jd": "Pandas"
+          },
+          {
+            "resume": "SQL",
+            "jd": "SQL"
+          },
+          {
+            "resume": "Cleaned and analysed sales data",
+            "jd": "cleaning and analysing data"
+          }
+        ],
+        "missing": [
+          "Tableau",
+          "Excel",
+          "A/B testing",
+          "Statistics"
+        ]
+      }
     },
     {
       "job_id": "j_104",
       "title": "Data Engineer",
       "company": "Streamline Data",
       "score": 57,
-      "matched_skills": ["Python", "SQL", "Linux", "Git"],
+      "matched_skills": [
+        "Python",
+        "SQL",
+        "Linux",
+        "Git"
+      ],
       "missing_skills": [
-        { "skill": "Apache Spark", "importance": "high", "suggestion": "Rewrite one Pandas pipeline in PySpark on a sample dataset." },
-        { "skill": "Airflow", "importance": "high", "suggestion": "Schedule a small ETL job as an Airflow DAG." },
-        { "skill": "Kafka", "importance": "medium", "suggestion": "Work through a Kafka producer/consumer tutorial." },
-        { "skill": "AWS", "importance": "medium", "suggestion": "Store pipeline output in S3 on the free tier." },
-        { "skill": "dbt", "importance": "low", "suggestion": "Model a small warehouse schema with dbt." }
+        {
+          "skill": "Apache Spark",
+          "importance": "high",
+          "suggestion": "Rewrite one Pandas pipeline in PySpark on a sample dataset."
+        },
+        {
+          "skill": "Airflow",
+          "importance": "high",
+          "suggestion": "Schedule a small ETL job as an Airflow DAG."
+        },
+        {
+          "skill": "Kafka",
+          "importance": "medium",
+          "suggestion": "Work through a Kafka producer/consumer tutorial."
+        },
+        {
+          "skill": "AWS",
+          "importance": "medium",
+          "suggestion": "Store pipeline output in S3 on the free tier."
+        },
+        {
+          "skill": "dbt",
+          "importance": "low",
+          "suggestion": "Model a small warehouse schema with dbt."
+        }
       ],
       "bullets": [
         {
@@ -82,20 +268,71 @@
           "suggested": "Cleaned and transformed sales data with Pandas and SQL",
           "reason": "Frames existing data work in pipeline terms"
         }
-      ]
+      ],
+      "jd_text": "Data Engineer - Streamline Data\n\nDesign the pipelines that feed our analytics warehouse.\n\nRequirements\n- Python and SQL for ETL development\n- Apache Spark and Airflow for batch workflows\n- Kafka for streaming ingestion\n- AWS data services and dbt for modelling\n- Linux and Git fundamentals\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "SQL",
+            "jd": "SQL"
+          },
+          {
+            "resume": "Linux",
+            "jd": "Linux"
+          },
+          {
+            "resume": "Git",
+            "jd": "Git"
+          }
+        ],
+        "missing": [
+          "Apache Spark",
+          "Airflow",
+          "Kafka",
+          "AWS",
+          "dbt"
+        ]
+      }
     },
     {
       "job_id": "j_105",
       "title": "Computer Vision Research Intern",
       "company": "Helix Robotics",
       "score": 46,
-      "matched_skills": ["Python", "PyTorch"],
+      "matched_skills": [
+        "Python",
+        "PyTorch"
+      ],
       "missing_skills": [
-        { "skill": "OpenCV", "importance": "high", "suggestion": "Add an OpenCV preprocessing step to your classifier project." },
-        { "skill": "C++", "importance": "high", "suggestion": "Port one performance-critical function to C++." },
-        { "skill": "CUDA", "importance": "medium", "suggestion": "Profile a training run on GPU and note the speed-up." },
-        { "skill": "ROS", "importance": "medium", "suggestion": "Complete the ROS beginner tutorials." },
-        { "skill": "Linear algebra", "importance": "low", "suggestion": "Show geometry or linear-algebra coursework in a project." }
+        {
+          "skill": "OpenCV",
+          "importance": "high",
+          "suggestion": "Add an OpenCV preprocessing step to your classifier project."
+        },
+        {
+          "skill": "C++",
+          "importance": "high",
+          "suggestion": "Port one performance-critical function to C++."
+        },
+        {
+          "skill": "CUDA",
+          "importance": "medium",
+          "suggestion": "Profile a training run on GPU and note the speed-up."
+        },
+        {
+          "skill": "ROS",
+          "importance": "medium",
+          "suggestion": "Complete the ROS beginner tutorials."
+        },
+        {
+          "skill": "Linear algebra",
+          "importance": "low",
+          "suggestion": "Show geometry or linear-algebra coursework in a project."
+        }
       ],
       "bullets": [
         {
@@ -103,55 +340,223 @@
           "suggested": "Built a PyTorch image classifier, a foundation for vision work",
           "reason": "Highlights the vision-related experience already on your resume"
         }
-      ]
+      ],
+      "jd_text": "Computer Vision Research Intern - Helix Robotics\n\nPrototype perception models for warehouse robots.\n\nRequirements\n- Python and PyTorch for training vision models\n- OpenCV and C++ for real-time processing\n- CUDA for GPU acceleration and ROS for robot integration\n- A solid grounding in linear algebra\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "PyTorch",
+            "jd": "PyTorch"
+          },
+          {
+            "resume": "image classifier",
+            "jd": "vision models"
+          }
+        ],
+        "missing": [
+          "OpenCV",
+          "C++",
+          "CUDA",
+          "ROS",
+          "linear algebra"
+        ]
+      }
     },
     {
       "job_id": "j_106",
       "title": "Full-Stack Developer",
       "company": "Pixel & Pine",
       "score": 38,
-      "matched_skills": ["Git", "SQL", "Python"],
-      "missing_skills": [
-        { "skill": "React", "importance": "high", "suggestion": "Build a small React front end for one of your APIs." },
-        { "skill": "TypeScript", "importance": "high", "suggestion": "Convert a JavaScript project to TypeScript." },
-        { "skill": "Node.js", "importance": "high", "suggestion": "Build a simple Express service." },
-        { "skill": "CSS", "importance": "medium", "suggestion": "Publish a responsive page to show layout skills." },
-        { "skill": "GraphQL", "importance": "low", "suggestion": "Expose one dataset through a GraphQL endpoint." },
-        { "skill": "Jest", "importance": "low", "suggestion": "Add unit tests to a front-end project." }
+      "matched_skills": [
+        "Git",
+        "SQL",
+        "Python"
       ],
-      "bullets": []
+      "missing_skills": [
+        {
+          "skill": "React",
+          "importance": "high",
+          "suggestion": "Build a small React front end for one of your APIs."
+        },
+        {
+          "skill": "TypeScript",
+          "importance": "high",
+          "suggestion": "Convert a JavaScript project to TypeScript."
+        },
+        {
+          "skill": "Node.js",
+          "importance": "high",
+          "suggestion": "Build a simple Express service."
+        },
+        {
+          "skill": "CSS",
+          "importance": "medium",
+          "suggestion": "Publish a responsive page to show layout skills."
+        },
+        {
+          "skill": "GraphQL",
+          "importance": "low",
+          "suggestion": "Expose one dataset through a GraphQL endpoint."
+        },
+        {
+          "skill": "Jest",
+          "importance": "low",
+          "suggestion": "Add unit tests to a front-end project."
+        }
+      ],
+      "bullets": [],
+      "jd_text": "Full-Stack Developer - Pixel & Pine\n\nShip customer-facing features across our web stack.\n\nRequirements\n- React and TypeScript on the front end, with CSS\n- Node.js services exposing GraphQL APIs\n- Testing with Jest\n- SQL databases and Git workflows\n- Python scripting is a plus\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Python",
+            "jd": "Python"
+          },
+          {
+            "resume": "SQL",
+            "jd": "SQL"
+          },
+          {
+            "resume": "Git",
+            "jd": "Git"
+          }
+        ],
+        "missing": [
+          "React",
+          "TypeScript",
+          "CSS",
+          "Node.js",
+          "GraphQL",
+          "Jest"
+        ]
+      }
     },
     {
       "job_id": "j_107",
       "title": "DevOps Engineer",
       "company": "Cloudhaven",
       "score": 33,
-      "matched_skills": ["Linux", "Git"],
-      "missing_skills": [
-        { "skill": "Kubernetes", "importance": "high", "suggestion": "Deploy a sample app to a local minikube cluster." },
-        { "skill": "Terraform", "importance": "high", "suggestion": "Define a small cloud resource with Terraform." },
-        { "skill": "Docker", "importance": "high", "suggestion": "Containerize one of your projects." },
-        { "skill": "AWS", "importance": "high", "suggestion": "Complete a cloud practitioner learning path." },
-        { "skill": "CI/CD", "importance": "medium", "suggestion": "Add a GitHub Actions pipeline to a repo." },
-        { "skill": "Bash scripting", "importance": "medium", "suggestion": "Automate a routine task with a documented shell script." },
-        { "skill": "Prometheus", "importance": "low", "suggestion": "Add basic metrics to a FastAPI service." }
+      "matched_skills": [
+        "Linux",
+        "Git"
       ],
-      "bullets": []
+      "missing_skills": [
+        {
+          "skill": "Kubernetes",
+          "importance": "high",
+          "suggestion": "Deploy a sample app to a local minikube cluster."
+        },
+        {
+          "skill": "Terraform",
+          "importance": "high",
+          "suggestion": "Define a small cloud resource with Terraform."
+        },
+        {
+          "skill": "Docker",
+          "importance": "high",
+          "suggestion": "Containerize one of your projects."
+        },
+        {
+          "skill": "AWS",
+          "importance": "high",
+          "suggestion": "Complete a cloud practitioner learning path."
+        },
+        {
+          "skill": "CI/CD",
+          "importance": "medium",
+          "suggestion": "Add a GitHub Actions pipeline to a repo."
+        },
+        {
+          "skill": "Bash scripting",
+          "importance": "medium",
+          "suggestion": "Automate a routine task with a documented shell script."
+        },
+        {
+          "skill": "Prometheus",
+          "importance": "low",
+          "suggestion": "Add basic metrics to a FastAPI service."
+        }
+      ],
+      "bullets": [],
+      "jd_text": "DevOps Engineer - Cloudhaven\n\nKeep our cloud platform reliable and easy to deploy.\n\nRequirements\n- Kubernetes and Docker in production\n- Infrastructure as code with Terraform on AWS\n- CI/CD pipelines and Bash scripting\n- Monitoring with Prometheus\n- Strong Linux and Git skills\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Linux",
+            "jd": "Linux"
+          },
+          {
+            "resume": "Git",
+            "jd": "Git"
+          }
+        ],
+        "missing": [
+          "Kubernetes",
+          "Docker",
+          "Terraform",
+          "AWS",
+          "CI/CD",
+          "Bash scripting",
+          "Prometheus"
+        ]
+      }
     },
     {
       "job_id": "j_108",
       "title": "Mobile Developer (iOS)",
       "company": "Orbit Apps",
       "score": 30,
-      "matched_skills": ["Git"],
-      "missing_skills": [
-        { "skill": "Swift", "importance": "high", "suggestion": "Complete an introductory Swift course and build one small app." },
-        { "skill": "SwiftUI", "importance": "high", "suggestion": "Build a simple SwiftUI interface." },
-        { "skill": "Xcode", "importance": "high", "suggestion": "Learn the Xcode toolchain by shipping a demo app." },
-        { "skill": "REST APIs", "importance": "medium", "suggestion": "Call one of your own FastAPI endpoints from an app." },
-        { "skill": "Core Data", "importance": "low", "suggestion": "Persist data locally in a demo app." }
+      "matched_skills": [
+        "Git"
       ],
-      "bullets": []
+      "missing_skills": [
+        {
+          "skill": "Swift",
+          "importance": "high",
+          "suggestion": "Complete an introductory Swift course and build one small app."
+        },
+        {
+          "skill": "SwiftUI",
+          "importance": "high",
+          "suggestion": "Build a simple SwiftUI interface."
+        },
+        {
+          "skill": "Xcode",
+          "importance": "high",
+          "suggestion": "Learn the Xcode toolchain by shipping a demo app."
+        },
+        {
+          "skill": "REST APIs",
+          "importance": "medium",
+          "suggestion": "Call one of your own FastAPI endpoints from an app."
+        },
+        {
+          "skill": "Core Data",
+          "importance": "low",
+          "suggestion": "Persist data locally in a demo app."
+        }
+      ],
+      "bullets": [],
+      "jd_text": "Mobile Developer (iOS) - Orbit Apps\n\nBuild and polish our consumer iOS app.\n\nRequirements\n- Swift and SwiftUI, built in Xcode\n- Integrating REST APIs and Core Data persistence\n- Git for collaboration\n",
+      "diff": {
+        "matched": [
+          {
+            "resume": "Git",
+            "jd": "Git"
+          }
+        ],
+        "missing": [
+          "Swift",
+          "SwiftUI",
+          "Xcode",
+          "REST APIs",
+          "Core Data"
+        ]
+      }
     }
   ]
 }

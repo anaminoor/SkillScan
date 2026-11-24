@@ -10,6 +10,9 @@
   --danger: #ff5370;   /* missing skill */
   --info: #4dabf7;
 
+  /* Small-label text: lighter than --text-dim so 11px labels pass 4.5:1 on --bg/--surface */
+  --text-label: #9aa6b6;
+
   /* Derived glows / tints */
   --accent-glow: rgba(0, 255, 156, 0.35);
   --accent-tint: rgba(0, 255, 156, 0.08);
